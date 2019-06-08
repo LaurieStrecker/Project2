@@ -67,7 +67,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50)
     },
     cip_code_one: {
-      type: DataTypes.DECIMAL(2, 4)
+      type: DataTypes.DECIMAL(4, 4)
     }
   });
   return Students;
