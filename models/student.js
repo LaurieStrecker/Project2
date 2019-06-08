@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Student = sequelize.define("student_db", {
+  var Student = sequelize.define("student", {
     first_name: {
       type: DataTypes.STRING(50),
       allowNull: false,
