@@ -26,14 +26,12 @@ module.exports = function(app) {
 
   // Update
   app.put("/api/examples", function(req, res) {
-    db.Students.update(req.body, 
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(dbExample) {
-        res.json(dbExample);
-      });
+    db.Students.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbExample) {
+      res.json(dbExample);
+    });
   });
 };
