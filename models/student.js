@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Student = sequelize.define("student", {
+  var Students = sequelize.define("students", {
     first_name: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -70,5 +70,5 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL(2,4)
     }
   });
-  return Student;
+  return Students;
 };
