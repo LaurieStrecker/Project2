@@ -7,8 +7,9 @@ USE student_db;
 CREATE TABLE students (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(50) NOT NULL,
-  middle_name VARCHAR(50),
   last_name VARCHAR(50) NOT NULL,
+  school_name VARCHAR(50) NOT NULL,
+  qt_sem VARCHAR(50) NOT NULL,
   program_start DATE NOT NULL,
   program_end DATE NOT NULL,
   ed_level VARCHAR(50),
