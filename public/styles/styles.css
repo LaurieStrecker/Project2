@@ -20,3 +20,14 @@ img {
 i:hover {
   color: #777777
 }
+
+.userSubmit {
+  width: 300px;
+  margin-top: 10x;
+}
+
+.copy {
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
