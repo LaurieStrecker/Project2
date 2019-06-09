@@ -55,6 +55,7 @@ app.use(
     extended: true
   })
 );
+
 app.use(
   session({
     secret: "cookie_secret",
