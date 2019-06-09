@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
+  app.get("/students/:id", function(req, res) {
     db.Students.findOne({ where: { id: req.params.id } }).then(function(
       dbExample
     ) {
