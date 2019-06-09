@@ -4,21 +4,21 @@ CREATE DATABASE student_db;
 
 USE student_db;
 
-CREATE TABLE students (
-  id INT NOT NULL AUTO_INCREMENT,
-  first_name VARCHAR(50) NOT NULL,
-  last_name VARCHAR(50) NOT NULL,
-  email VARCHAR(50) NOT NULL,
-  phone VARCHAR(50) NOT NULL,
-  google_id INT(100) NOT NULL,
-  school_name VARCHAR(50) NOT NULL,
-  qt_sem VARCHAR(50) NOT NULL,
-  program_start DATE NOT NULL,
-  program_end DATE NOT NULL,
-  ed_level VARCHAR(50),
-  cip_code_one DECIMAL(2,4),
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE students (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   first_name VARCHAR(50) NOT NULL,
+--   last_name VARCHAR(50) NOT NULL,
+--   email VARCHAR(50) NOT NULL,
+--   phone VARCHAR(50) NOT NULL,
+--   google_id INT(100) NOT NULL,
+--   school_name VARCHAR(50) NOT NULL,
+--   qt_sem VARCHAR(50) NOT NULL,
+--   program_start DATE NOT NULL,
+--   program_end DATE NOT NULL,
+--   ed_level VARCHAR(50),
+--   cip_code_one DECIMAL(2,4),
+--   PRIMARY KEY (id)
+-- );
 
 
 -- Definitions
