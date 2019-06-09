@@ -18,6 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50),
       allowNull: false,
       validate: {
+        isEmail: true,
         len: [1]
       }
     },
@@ -53,6 +54,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: false,
       validate: {
+        isDate: true,
         len: [1]
       }
     },
@@ -60,6 +62,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       allowNull: false,
       validate: {
+        isDate: true,
         len: [1]
       }
     },
@@ -67,7 +70,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50)
     },
     cip_code_one: {
-      type: DataTypes.DECIMAL(2, 4)
+      type: DataTypes.DECIMAL(4, 4),
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     }
   });
   return Students;
