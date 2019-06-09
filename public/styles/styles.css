@@ -1,3 +1,22 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+#page {
+  display: flex;
+}
+
+.newUserInfo {
+  width: 500px;
+  margin-right: 75px
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+i:hover {
+  color: #777777
+}
