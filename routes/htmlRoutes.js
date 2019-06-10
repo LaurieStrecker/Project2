@@ -3,13 +3,12 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Students.all(function(data) {
-      var hbsObject = {
-        index: data
-      };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
-    });
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  // new user route loads newUser.html
+  app.get("/newuser", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/newUser.html"));
   });
 
   // Load example page and pass in an example by id
