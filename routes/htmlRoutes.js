@@ -3,11 +3,12 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Students.findAll({}).then(function(student_db) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: student_db
-      });
+    db.Students.all(function(data) {
+      var hbsObject = {
+        index: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
     });
   });
 
