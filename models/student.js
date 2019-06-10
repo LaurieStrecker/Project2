@@ -1,81 +1,21 @@
 module.exports = function(sequelize, DataTypes) {
-  var Students = sequelize.define("students", {
-    first_name: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    last_name: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    email: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        isEmail: true,
-        len: [1]
-      }
-    },
-    phone: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+  var Student = sequelize.define("student", {
+    // Giving the student google id of an integer
     google_id: {
       type: DataTypes.INTEGER(100),
       allowNull: false,
       validate: {
         len: [1]
       }
-    },
-    school_name: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    qt_sem: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    program_start: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      validate: {
-        isDate: true,
-        len: [1]
-      }
-    },
-    program_end: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      validate: {
-        isDate: true,
-        len: [1]
-      }
-    },
-    ed_level: {
-      type: DataTypes.STRING(50)
-    },
-    cip_code_one: {
-      type: DataTypes.DECIMAL(4, 4),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
     }
   });
-  return Students;
+
+  Student.associate = function(models) {
+    // Associating Student with Posts
+    // When an Student is deleted, also delete any associated Posts
+    Student.hasMany(models.Post, {
+      onDelete: "cascade"
+    });
+  };
+  return Student;
 };
