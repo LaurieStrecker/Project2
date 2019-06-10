@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "squackBox1!",
+    "password": "yourRootPassword",
     "database": "student_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "squackBox1!",
+    "password": "yourRootPassword",
     "database": "student_db",
     "host": "localhost",
     "dialect": "mysql",
