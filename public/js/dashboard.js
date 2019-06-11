@@ -1,4 +1,3 @@
-
 $("#firstNameDisplay").append("Cleatus");
 $("#schoolNameDisplay").append("Pudget Sound University");
 $("#edLvlDisplay").append("Associate's");
