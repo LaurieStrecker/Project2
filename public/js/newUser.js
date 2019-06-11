@@ -98,6 +98,18 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
+$("#submit").on("click", function(event) {
+  event.preventDefault();
+  var lastName = $("#lastName")
+    .val()
+    .trim();
+  var firstName = $("#firstName")
+    .val()
+    .trim();
+  console.log(lastName);
+  console.log(firstName);
+});
+
 // function onSignIn(googleUser) {
 //   // Useful data for your client-side scripts:
 //   var profile = googleUser.getBasicProfile();
