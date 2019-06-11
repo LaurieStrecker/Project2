@@ -47,8 +47,6 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-<<<<<<< HEAD
-=======
     },
     school_name: {
       type: DataTypes.STRING(50),
@@ -96,7 +94,6 @@ module.exports = function(sequelize, DataTypes) {
     status: {
       type: DataTypes.ENUM("active", "inactive"),
       defaultValue: "active"
->>>>>>> master
     }
   });
 
