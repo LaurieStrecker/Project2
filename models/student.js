@@ -97,12 +97,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Student.associate = function(models) {
-    // Associating Student with Posts
-    // When an Student is deleted, also delete any associated Posts
-    Student.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  };
-  return Student;
+  return Students;
 };
