@@ -1,18 +1,30 @@
 module.exports = function(sequelize, DataTypes) {
   var Students = sequelize.define("students", {
-    first_name: {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    firstname: {
       type: DataTypes.STRING(50),
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    last_name: {
+    lastname: {
       type: DataTypes.STRING(50),
       allowNull: false,
       validate: {
         len: [1]
       }
+    },
+    username: {
+      type: DataTypes.TEXT
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING(50),
@@ -75,6 +87,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
+    },
+    last_login: {
+      type: DataTypes.DATE
+    },
+    status: {
+      type: DataTypes.ENUM("active", "inactive"),
+      defaultValue: "active"
     }
   });
   return Students;
