@@ -1,433 +1,263 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="utf-8">
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="../public/styles/styles.css"
-      media="screen"
-      title="no title"
-      charset="utf-8"
-    />
-    <title>Pocket Advisor</title>
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>New Student Information</h1>
-        <hr />
-        <h3>
-          Before you get started, we need to gather some information from your
-          I-20. Please complete the below fields and hit the Submit button.
-        </h3>
-      </div>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Pocket Advisor</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>New Student Information</h1>
+      <hr>
+      <h3>Before you get started, we need to gather some information from your I-20. Please complete the below fields
+        and hit the
+        Submit button.</h3>
+
     </div>
+  </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <form action="/action_page.php">
-            <div id="page">
-              <div id="leftSide">
-                <div class="form-group left">
-                  <label for="lastName">Last Name</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalLastName"
-                  ></i>
-                  <input
-                    type="text"
-                    class="form-control newUserInfo"
-                    id="lastName"
-                    placeholder="Smith"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
 
-                <div class="form-group left">
-                  <label for="email">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control newUserInfo"
-                    id="email"
-                    placeholder="name@example.com"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
+        <form action="/action_page.php">
+          <div id="page">
+            <div id="leftSide">
 
-                <div class="form-group right">
-                  <label for="schoolName">School Name</label>
-                  <input
-                    type="text"
-                    class="form-control newUserInfo"
-                    id="schoolName"
-                    placeholder="Unversity of Washington"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
-
-                <div class="form-group left">
-                  <label for="startDate">Program Start Date</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalStartDate"
-                  ></i>
-                  <input
-                    type="date"
-                    class="form-control newUserInfo"
-                    id="startDate"
-                  />
-                </div>
-
-                <div class="form-group left">
-                  <label for="edLvl">Education Level</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalEdLvl"
-                  ></i>
-                  <select class="form-control newUserInfo" id="edLvl">
-                    <option selected>Select One</option>
-                    <option value="languageTraning">Language Training</option>
-                    <option value="associates">Associate's</option>
-                    <option value="bachelors">Bachelor's</option>
-                    <option value="masters">Master's</option>
-                    <option value="doctoral">Doctoral</option>
-                  </select>
-                </div>
+              <div class="form-group left">
+                <label for="lastName">Last Name</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalLastName"></i>
+                <input type="text" class="form-control newUserInfo" id="lastName" placeholder="Smith"
+                  onfocus="this.placeholder = ''">
               </div>
 
-              <div id="rightSide">
-                <div class="form-group right">
-                  <label for="firstName">First Name</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalFirstName"
-                  ></i>
-                  <input
-                    type="text"
-                    class="form-control newUserInfo"
-                    id="firstName"
-                    placeholder="John"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
-
-                <div class="form-group right">
-                  <label for="phone">Phone Number</label>
-                  <input
-                    type="text"
-                    class="form-control newUserInfo"
-                    id="phone"
-                    placeholder="1-555-555-5555"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
-
-                <div class="form-group left">
-                  <label for="termType">Academic Term</label>
-                  <select class="form-control newUserInfo" id="termType">
-                    <option selected>Select One</option>
-                    <option value="quarter">Quarter</option>
-                    <option value="semester">Semester</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="endDate">Program End Date</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalEndDate"
-                  ></i>
-                  <input
-                    type="date"
-                    class="form-control newUserInfo"
-                    id="endDate"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="cipCode">Major Code</label>
-                  <i
-                    class="far fa-question-circle"
-                    data-toggle="modal"
-                    data-target="#modalCipCode"
-                  ></i>
-                  <input
-                    type="text"
-                    class="form-control newUserInfo"
-                    id="cipCode"
-                    placeholder="09.0101"
-                    onfocus="this.placeholder = ''"
-                  />
-                </div>
+              <div class="form-group left">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control newUserInfo" id="email" placeholder="name@example.com"
+                  onfocus="this.placeholder = ''">
               </div>
+
+              <div class="form-group right">
+                <label for="schoolName">School Name</label>
+                <input type="text" class="form-control newUserInfo" id="schoolName"
+                  placeholder="Unversity of Washington" onfocus="this.placeholder = ''">
+              </div>
+
+              <div class="form-group left">
+                <label for="startDate">Program Start Date</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalStartDate"></i>
+                <input type="date" class="form-control newUserInfo" id="startDate">
+              </div>
+
+              <div class="form-group left">
+                <label for="edLvl">Education Level</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEdLvl"></i>
+                <select class="form-control newUserInfo" id="edLvl">
+                  <option selected>Select One</option>
+                  <option value="languageTraning">Language Training</option>
+                  <option value="associates">Associate's</option>
+                  <option value="bachelors">Bachelor's</option>
+                  <option value="masters">Master's</option>
+                  <option value="doctoral">Doctoral</option>
+                </select>
+              </div>
+
             </div>
-          </form>
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary userSubmit">
-              Submit
-            </button>
+
+            <div id="rightSide">
+
+              <div class="form-group right">
+                <label for="firstName">First Name</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalFirstName"></i>
+                <input type="text" class="form-control newUserInfo" id="firstName" placeholder="John"
+                  onfocus="this.placeholder = ''">
+              </div>
+
+              <div class="form-group right">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control newUserInfo" id="phone" placeholder="1-555-555-5555"
+                  onfocus="this.placeholder = ''">
+              </div>
+
+              <div class="form-group left">
+                <label for="termType">Academic Term</label>
+                <select class="form-control newUserInfo" id="termType">
+                  <option selected>Select One</option>
+                  <option value="quarter">Quarter</option>
+                  <option value="semester">Semester</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="endDate">Program End Date</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEndDate"></i>
+                <input type="date" class="form-control newUserInfo" id="endDate">
+              </div>
+
+              <div class="form-group">
+                <label for="cipCode">Major Code</label>
+                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalCipCode"></i>
+                <input type="text" class="form-control newUserInfo" id="cipCode" placeholder="09.0101"
+                  onfocus="this.placeholder = ''">
+              </div>
+
+            </div>
           </div>
+        </form>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary userSubmit">Submit</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="d-flex justify-content-center copyright">
-        <p class="copy">Pocket Advisor &copy; 2019</p>
-      </div>
-    </footer>
+  <footer>
+    <div class="d-flex justify-content-center copyright">
+      <p class="copy">Pocket Advisor &copy; 2019 </p>
+    </div>
+  </footer>
 
-    <!-- Modals -->
-    <!-- Last Name Modal -->
-    <div
-      class="modal fade"
-      id="modalLastName"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="lastNameModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="lastNameModalLabel">Last Name</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/lastName.png" alt="I-20 Last Name" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+
+  <!-- Modals -->
+  <!-- Last Name Modal -->
+  <div class="modal fade" id="modalLastName" tabindex="-1" role="dialog" aria-labelledby="lastNameModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lastNameModalLabel">Last Name</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/lastName.png" alt="I-20 Last Name">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- First Name Modal -->
-    <div
-      class="modal fade"
-      id="modalFirstName"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="firstNameModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="firstNameModalLabel">First Name</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/firstName.png" alt="I-20 First Name" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+  <!-- First Name Modal -->
+  <div class="modal fade" id="modalFirstName" tabindex="-1" role="dialog" aria-labelledby="firstNameModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="firstNameModalLabel">First Name</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/firstName.png" alt="I-20 First Name">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Start Date Modal -->
-    <div
-      class="modal fade"
-      id="modalStartDate"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="startDateModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="startDateModalLabel">
-              Program Start Date
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/prgStart.png" alt="I-20 Start Date" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+  <!-- Start Date Modal -->
+  <div class="modal fade" id="modalStartDate" tabindex="-1" role="dialog" aria-labelledby="startDateModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="startDateModalLabel">Program Start Date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/prgStart.png" alt="I-20 Start Date">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- End Date Modal -->
-    <div
-      class="modal fade"
-      id="modalEndDate"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="endDateModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="endDateModalLabel">Program End Date</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/prgEnd.png" alt="I-20 End Date" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+  <!-- End Date Modal -->
+  <div class="modal fade" id="modalEndDate" tabindex="-1" role="dialog" aria-labelledby="endDateModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="endDateModalLabel">Program End Date</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/prgEnd.png" alt="I-20 End Date">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Education Level Modal -->
-    <div
-      class="modal fade"
-      id="modalEdLvl"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="edLvlModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="edLvlModalLabel">Education Level</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/edLvl.png" alt="I-20 Education Level" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+  <!-- Education Level Modal -->
+  <div class="modal fade" id="modalEdLvl" tabindex="-1" role="dialog" aria-labelledby="edLvlModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edLvlModalLabel">Education Level</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/edLvl.png" alt="I-20 Education Level">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Cip Code Modal -->
-    <div
-      class="modal fade"
-      id="modalCipCode"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="cipCodeModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cipCodeModalLabel">Major Code</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img src="../public/images/cip.png" alt="I-20 Major Code" />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+  <!-- Cip Code Modal -->
+  <div class="modal fade" id="modalCipCode" tabindex="-1" role="dialog" aria-labelledby="cipCodeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cipCodeModalLabel">Major Code</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="../public/images/cip.png" alt="I-20 Major Code">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+
+</body>
+
 </html>
