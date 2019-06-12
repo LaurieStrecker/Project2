@@ -1,8 +1,8 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
+/* var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $exampleList = $("#example-list"); */
 
 // The API object contains methods for each kind of request we'll make
 /* var API = {
@@ -31,7 +31,7 @@ var $exampleList = $("#example-list");
 }; */
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
+/* var refreshExamples = function() {
   API.getExamples().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
@@ -57,7 +57,7 @@ var refreshExamples = function() {
     $exampleList.empty();
     $exampleList.append($examples);
   });
-};
+}; */
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
