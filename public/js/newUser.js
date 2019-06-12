@@ -100,6 +100,7 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick); */
 
 $("#submit").on("click", function(event) {
   event.preventDefault();
+  console.log(event);
   var lastName = $("#lastName")
     .val()
     .trim();
@@ -127,6 +128,9 @@ $("#submit").on("click", function(event) {
   var edLvl = $("#edLvl")
     .val()
     .trim();
+  var email = $("#email")
+    .val()
+    .trim();
 
   var newStudent = {
     firstname: firstName,
@@ -137,7 +141,8 @@ $("#submit").on("click", function(event) {
     program_start: startDate,
     program_end: endDate,
     ed_level: edLvl,
-    cip_code_one: cipCode
+    cip_code_one: cipCode,
+    email: email
   };
 
   console.log(newStudent);
@@ -150,7 +155,8 @@ $("#submit").on("click", function(event) {
     url: "/api/students",
     type: "POST",
     data: JSON.stringify(newStudent)
-  }).then(function() {
+  }).then(function(res) {
+    console.log(res);
     console.log("info saved to database");
   });
 });
