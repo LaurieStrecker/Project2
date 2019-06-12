@@ -13,5 +13,4 @@ console.log(db);
 //   $("#prgEndDisplay").append("June 19, 2022");
 // });
 
-
 // grab data from relevant columns and append the dashboard page
