@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <title>Pocket Advisor</title>
 </head>
@@ -24,11 +24,23 @@
 
     <div class="jumbotron text-center dashHeader">
 
-      <h1>Hi <span id="firstNameDisplay"></span> </h1>
+      <h1>Hi <span id="firstNameDisplay"></span></h1>
         <i class="fas fa-user-graduate userPic"></i>
     </div>
 
-   <div></div>
+   <div class="container">
+     <div class="row justify-content-center">
+       <div class="col-8 stuInfo">
+        <h2><span id="schoolNameDisplay"></span></h2>
+        <h3><span id="edLvlDisplay"></span> in</h3>
+        <h3><span id="majorDisplay"></span></h3>
+        <h3>I-20 Program End Date:</h3>
+        <h3><span id="prgEndDisplay"></span></h3>
+
+       </div>
+     </div>
+
+   </div>
 
   </div>
 
@@ -38,6 +50,7 @@
     </div>
   </footer>
 
+  <script src="../public/js/dashboard.js"></script>
 </body>
 
 </html>
