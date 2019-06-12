@@ -34,87 +34,93 @@
 
         <form action="/action_page.php">
           <div id="page">
-            <div id="leftSide">
 
-              <div class="form-group left">
-                <label for="lastName">Last Name</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalLastName"></i>
-                <input type="text" class="form-control newUserInfo" id="lastName" placeholder="Smith"
-                  onfocus="this.placeholder = ''">
+            
+            <div class="row" id="leftSide">
+              <div class="col-6">
+
+                <div class="form-group left">
+                  <label for="lastName">Last Name</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalLastName"></i>
+                  <input type="text" class="form-control newUserInfo" id="lastName" placeholder="Smith"
+                    onfocus="this.placeholder = ''">
+                </div>
+
+                <div class="form-group left">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control newUserInfo" id="email" placeholder="name@example.com"
+                    onfocus="this.placeholder = ''">
+                </div>
+
+                <div class="form-group right">
+                  <label for="schoolName">School Name</label>
+                  <input type="text" class="form-control newUserInfo" id="schoolName"
+                    placeholder="Unversity of Washington" onfocus="this.placeholder = ''">
+                </div>
+
+                <div class="form-group left">
+                  <label for="startDate">Program Start Date</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalStartDate"></i>
+                  <input type="date" class="form-control newUserInfo" id="startDate">
+                </div>
+
+                <div class="form-group left">
+                  <label for="edLvl">Education Level</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEdLvl"></i>
+                  <select class="form-control newUserInfo" id="edLvl">
+                    <option selected>Select One</option>
+                    <option value="languageTraning">Language Training</option>
+                    <option value="associates">Associate's</option>
+                    <option value="bachelors">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="doctoral">Doctoral</option>
+                  </select>
+                </div>
               </div>
-
-              <div class="form-group left">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control newUserInfo" id="email" placeholder="name@example.com"
-                  onfocus="this.placeholder = ''">
-              </div>
-
-              <div class="form-group right">
-                <label for="schoolName">School Name</label>
-                <input type="text" class="form-control newUserInfo" id="schoolName"
-                  placeholder="Unversity of Washington" onfocus="this.placeholder = ''">
-              </div>
-
-              <div class="form-group left">
-                <label for="startDate">Program Start Date</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalStartDate"></i>
-                <input type="date" class="form-control newUserInfo" id="startDate">
-              </div>
-
-              <div class="form-group left">
-                <label for="edLvl">Education Level</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEdLvl"></i>
-                <select class="form-control newUserInfo" id="edLvl">
-                  <option selected>Select One</option>
-                  <option value="languageTraning">Language Training</option>
-                  <option value="associates">Associate's</option>
-                  <option value="bachelors">Bachelor's</option>
-                  <option value="masters">Master's</option>
-                  <option value="doctoral">Doctoral</option>
-                </select>
-              </div>
-
             </div>
 
-            <div id="rightSide">
+            <div class="row" id="rightSide">
+              <div class="col-6">
 
-              <div class="form-group right">
-                <label for="firstName">First Name</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalFirstName"></i>
-                <input type="text" class="form-control newUserInfo" id="firstName" placeholder="John"
-                  onfocus="this.placeholder = ''">
+                <div class="form-group right">
+                  <label for="firstName">First Name</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalFirstName"></i>
+                  <input type="text" class="form-control newUserInfo" id="firstName" placeholder="John"
+                    onfocus="this.placeholder = ''">
+                </div>
+
+                <div class="form-group right">
+                  <label for="phone">Phone Number</label>
+                  <input type="text" class="form-control newUserInfo" id="phone" placeholder="1-555-555-5555"
+                    onfocus="this.placeholder = ''">
+                </div>
+
+                <div class="form-group left">
+                  <label for="termType">Academic Term</label>
+                  <select class="form-control newUserInfo" id="termType">
+                    <option selected>Select One</option>
+                    <option value="quarter">Quarter</option>
+                    <option value="semester">Semester</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="endDate">Program End Date</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEndDate"></i>
+                  <input type="date" class="form-control newUserInfo" id="endDate">
+                </div>
+
+                <div class="form-group">
+                  <label for="cipCode">Major Code</label>
+                  <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalCipCode"></i>
+                  <input type="text" class="form-control newUserInfo" id="cipCode" placeholder="09.0101"
+                    onfocus="this.placeholder = ''">
+                </div>
+
               </div>
-
-              <div class="form-group right">
-                <label for="phone">Phone Number</label>
-                <input type="text" class="form-control newUserInfo" id="phone" placeholder="1-555-555-5555"
-                  onfocus="this.placeholder = ''">
-              </div>
-
-              <div class="form-group left">
-                <label for="termType">Academic Term</label>
-                <select class="form-control newUserInfo" id="termType">
-                  <option selected>Select One</option>
-                  <option value="quarter">Quarter</option>
-                  <option value="semester">Semester</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="endDate">Program End Date</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEndDate"></i>
-                <input type="date" class="form-control newUserInfo" id="endDate">
-              </div>
-
-              <div class="form-group">
-                <label for="cipCode">Major Code</label>
-                <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalCipCode"></i>
-                <input type="text" class="form-control newUserInfo" id="cipCode" placeholder="09.0101"
-                  onfocus="this.placeholder = ''">
-              </div>
-
             </div>
           </div>
+
         </form>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-primary userSubmit">Submit</button>

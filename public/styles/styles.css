@@ -18,7 +18,7 @@ img {
 }
 
 .help:hover {
-  color: #777777
+  color: #777777;
 }
 
 .userSubmit {
@@ -46,4 +46,13 @@ img {
   font-size: 12px;
   margin-top: 25px;
   margin-bottom: 5px;
+}
+
+.stuInfo {
+  border-style: solid;
+  border-width: 10px;
+  border-color: lightgrey;
+  border-radius: 25px;
+  text-align: center;
+  margin: 20px;
 }
