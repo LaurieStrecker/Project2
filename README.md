@@ -1,45 +1,41 @@
-# Travis Setup
 
-In this activity we will set up the project repo with Travis CI to ensure that linting passes on all changes before they can be merged into master.
+# Project 1 - Pocket Adviser (Burce C, Kai R, Laurie S, Mark S)
 
-## Instructions
+## 1: What is your application?
 
-* Only the owner of the project repo should complete this activity, other group members should watch.
+* App that helps people maintain F1 status (student status) specifically for international students. this will store their student information and help keep them in good immigration standing.
 
-### Part 1: Protecting Master
+## 2: Why is your application userful?
+* Closes a gap in the system that otherwise people have to figure out on their own.
 
-* Before we can set up Travis, we must configure the project repo to protect the master branch.
+## 3: Who is your application for?
+* International students studying in the United States
 
-* Navigate to the repo's page, then click the "Settings" tab.
+## 4: When will users use your application?
+* When they arrive, they can input their immigration information and set the app to notify them about important dates, certain rules, and warnings. Specifically the ones that will prevent them from being in good standing. Following rules outlined by your visa type.
 
-* Select "Branches" from the left sidebar.
+## 5: List proposed new library, package, or technology
+* Moment npm package (time functions: time zones, ect.)
 
-* Under "Branch protection rules", choose "master" from the dropdown.
 
-* Check off the following options:
+## Upon stdent loging in askes for 
 
-  * "Protect this branch"
+### first/last name 
 
-  * "Require pull request reviews before merging"
+### quarter/semester start
+###  one mothe before end
+###   (have you reg for new qurster yet)
+###     if no (alert to reg)
+###     if yes (have you reg for at leats 12 cred)
+###       if yes (great)
+###       if no (add more classes)
 
-  * "Include administrators"
+### what uni
+###prog start/end 
+###  two months before end 
+###    (are you ready to graduate?)
+###      if yes (great, display post grad opt)
+###      if no (warning to alert to comun with advisor to exstend)
 
-  * "Require status checks to pass before merging"
-
-  * "Require branches to be up to date before merging"
-
-* Click "Save changes"
-
-### Part 2: Add Travis
-
-* Navigate to <https://github.com/marketplace/travis-ci>.
-
-* Select the option to "Set up a new plan" and choose the $0 "Open Source" plan when prompted.
-
-* Click "Install it for free" and then on the next page click "Complete order and begin installation".
-
-* On the next page select the radio button that reads "Only select repositories".
-
-* From the "Select repositories" dropdown, choose your project repo.
-
-* Click the "Install" button to complete the process.
+###if atendded 3 quarters (vaca quarter elig)
+###  if yes (pick class)

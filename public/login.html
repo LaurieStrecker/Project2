@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Pocket Advisor</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1><span class="fa fa-lock"></span>User Authentication</h1>
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Login
+      </button>
+
+      <a href="/newuser"><button type="button" class="btn btn-primary">New User</button></a>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="signup" name="signup" method="post" action="/signup">
+                <label for="lastname">Username: </label>
+                <input name="lastname" type="text" /><br>
+                <label for="password">Password: </label>
+                <input name="password" type="password" /><br>
+                <input class="btn" type="submit" value="Login" />
+            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="/newuser"><button href="/newuser" type="button" class="btn btn-primary">New User</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer>
+      <div class="d-flex justify-content-center copyright">
+        <p class="copy">Pocket Advisor &copy; 2019 </p>
+      </div>
+    </footer>
+
+</body>
+
+</html>
