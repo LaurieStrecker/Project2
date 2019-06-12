@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Students = sequelize.define("students", {
+  var Students = sequelize.define("Students", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -75,7 +75,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50)
     },
     cip_code_one: {
-      type: DataTypes.DECIMAL(4, 4),
+      type: DataTypes.DECIMAL(6, 4),
       allowNull: false,
       validate: {
         len: [1]
