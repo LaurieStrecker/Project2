@@ -12,7 +12,6 @@ USE student_db;
 --   last_name VARCHAR(50) NOT NULL,
 --   email VARCHAR(50) NOT NULL,
 --   phone VARCHAR(50),
---   google_id INT(100) NOT NULL,
 --   school_name VARCHAR(50) NOT NULL,
 --   qt_sem VARCHAR(50) NOT NULL,
 --   program_start DATE NOT NULL,
