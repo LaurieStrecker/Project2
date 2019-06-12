@@ -5,7 +5,7 @@ var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
-var API = {
+/* var API = {
   saveExample: function(example) {
     return $.ajax({
       headers: {
@@ -28,7 +28,7 @@ var API = {
       type: "DELETE"
     });
   }
-};
+}; */
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
@@ -61,7 +61,7 @@ var refreshExamples = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+/* var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var example = {
@@ -96,7 +96,7 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$exampleList.on("click", ".delete", handleDeleteBtnClick); */
 
 $("#submit").on("click", function(event) {
   event.preventDefault();
@@ -106,8 +106,53 @@ $("#submit").on("click", function(event) {
   var firstName = $("#firstName")
     .val()
     .trim();
-  console.log(lastName);
-  console.log(firstName);
+  var phone = $("#phone")
+    .val()
+    .trim();
+  var termType = $("#termType")
+    .val()
+    .trim();
+  var endDate = $("#endDate")
+    .val()
+    .trim();
+  var cipCode = $("#cipCode")
+    .val()
+    .trim();
+  var schoolName = $("#schoolName")
+    .val()
+    .trim();
+  var startDate = $("#startDate")
+    .val()
+    .trim();
+  var edLvl = $("#edLvl")
+    .val()
+    .trim();
+
+  var newStudent = {
+    firstname: firstName,
+    lastname: lastName,
+    phone: phone,
+    school_name: schoolName,
+    qt_sem: termType,
+    program_start: startDate,
+    program_end: endDate,
+    ed_level: edLvl,
+    cip_code_one: cipCode
+  };
+
+  console.log(newStudent);
+
+  // use a post call to save all student info to our mysql db
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    url: "/api/students",
+    type: "POST",
+    data: JSON.stringify(newStudent)
+  }).then(function() {
+    console.log("info saved to database");
+  });
 });
 
 // function onSignIn(googleUser) {
