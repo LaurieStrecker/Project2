@@ -68,6 +68,9 @@ app.use(express.static(__dirname + "/public"));
 require("./routes/student-api-routes")(app);
 require("./routes/html-routes")(app);
 
+//load passport strategies
+require("./config/passport/passport.js")(passport, models.user);
+
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
