@@ -96,5 +96,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "active"
     }
   });
+
   return Students;
 };
