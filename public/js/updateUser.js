@@ -1,0 +1,10 @@
+$("#lastName").val("Lannister");
+$("#firstName").val("Jamie");
+$("#email").val("jamieonehand@gmail.com");
+$("#phone").val("555-666-7777");
+$("#schoolName").val("Pudget Sound University");
+$("#startDate").val("2019-09-24");
+$("#endDate").val("2021-06-15");
+$("#edLvl").val("bachelors");
+$("#termType").val("quarter");
+$("#cipCode").val("11.0101");

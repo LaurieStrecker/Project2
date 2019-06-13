@@ -17,7 +17,7 @@ img {
   width: 100%;
 }
 
-.help:hover {
+.help:hover,.faqHeader:hover,li:hover {
   color: #777777;
 }
 
@@ -59,4 +59,8 @@ img {
 
 .faq {
   text-align: center;
+}
+
+.update {
+  font-size: 12px;
 }
