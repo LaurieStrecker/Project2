@@ -11,6 +11,7 @@ module.exports = function(app) {
       },
       include: [db.Post]
     }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });
@@ -27,6 +28,17 @@ module.exports = function(app) {
     db.Students.destroy({
       where: {
         id: req.params.id
+      }
+    }).then(function(dbStudent) {
+      res.json(dbStudent);
+    });
+  });
+
+  //update
+  app.put("/api/students", function(req, res) {
+    db.Students.update(req.body, {
+      where: {
+        id: req.body.id
       }
     }).then(function(dbStudent) {
       res.json(dbStudent);
