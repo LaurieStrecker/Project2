@@ -30,6 +30,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });

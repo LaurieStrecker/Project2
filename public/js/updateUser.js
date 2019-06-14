@@ -1,3 +1,4 @@
+//grab user info and post to our updateUser page
 function getUser() {
   $.ajax({
     url: "api/students/5",
@@ -77,6 +78,19 @@ $("#updateInfo").on("click", function(event) {
     type: "PUT",
     data: JSON.stringify(updateUser)
   }).then(getUser);
+});
+
+//delete user from db
+$("#userDelete").on("click", function(event) {
+  event.preventDefault();
+  console.log(event);
+  $.ajax({
+    url: "/api/students/8",
+    type: "DELETE"
+  }).then(function() {
+    console.log("deleting user");
+    window.location = "/";
+  });
 });
 
 //update ajax call
