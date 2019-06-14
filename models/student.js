@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Students = sequelize.define("students", {
+  var Students = sequelize.define("Students", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -41,13 +41,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    google_id: {
-      type: DataTypes.INTEGER(100),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
     school_name: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -63,7 +56,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     program_start: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
         isDate: true,
@@ -71,7 +64,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     program_end: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
         isDate: true,
@@ -82,19 +75,28 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50)
     },
     cip_code_one: {
-      type: DataTypes.DECIMAL(4, 4),
+      type: DataTypes.DECIMAL(6, 4),
       allowNull: false,
       validate: {
         len: [1]
       }
     },
     last_login: {
-      type: DataTypes.DATE
+      type: DataTypes.DATEONLY
     },
     status: {
       type: DataTypes.ENUM("active", "inactive"),
       defaultValue: "active"
     }
   });
+
+  Students.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Students.hasMany(models.Post, {
+      onDelete: "cascade"
+    });
+  };
+
   return Students;
 };

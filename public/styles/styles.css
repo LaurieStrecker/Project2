@@ -17,7 +17,7 @@ img {
   width: 100%;
 }
 
-.help:hover {
+.help:hover,.faqHeader:hover,li:hover {
   color: #777777;
 }
 
@@ -55,4 +55,16 @@ img {
   border-radius: 25px;
   text-align: center;
   margin: 20px;
+}
+
+.faq {
+  text-align: center;
+}
+
+.update {
+  font-size: 12px;
+}
+
+.updateBanner {
+  padding: 25px;
 }

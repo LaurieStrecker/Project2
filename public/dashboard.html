@@ -12,9 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
 
-  <title>Pocket Advisor</title>
+  <title>Pocket Advisor - Home</title>
 </head>
 
 <body>
@@ -25,22 +25,57 @@
     <div class="jumbotron text-center dashHeader">
 
       <h1>Hi <span id="firstNameDisplay"></span></h1>
-        <i class="fas fa-user-graduate userPic"></i>
+      <i class="fas fa-user-graduate userPic"></i>
     </div>
 
-   <div class="container">
-     <div class="row justify-content-center">
-       <div class="col-8 stuInfo">
-        <h2><span id="schoolNameDisplay"></span></h2>
-        <h3><span id="edLvlDisplay"></span> in</h3>
-        <h3><span id="majorDisplay"></span></h3>
-        <h3>I-20 Program End Date:</h3>
-        <h3><span id="prgEndDisplay"></span></h3>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8 stuInfo">
+          <h2><span id="schoolNameDisplay"></span></h2>
+          <h3><span id="edLvlDisplay"></span> in</h3>
+          <h3><span id="majorDisplay"></span></h3>
+          <h3>I-20 Program End Date:</h3>
+          <h3><span id="prgEndDisplay"></span></h3>
 
-       </div>
-     </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <p class="update"><a href="updateUser.html">Update Information</a></p>
+      </div>
+    </div>
 
-   </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-12">
+        <h3 class="faq">Frequently Asked Questions</h3>
+        <p class="faq">Click for more information</p>
+        <br>
+      </div>
+      <div class="col-3">
+        <h4 class="faqHeader" data-toggle="modal" data-target="#employment">Employment</h4>
+        <ul>
+          <li data-toggle="modal" data-target="#onCamp">On Campus Employment</li>
+          <li data-toggle="modal" data-target="#CPT">Curricular Practical Training</li>
+          <li data-toggle="modal" data-target="#OPT">Optional Practical Training</li>
+          <ul>
+            <li data-toggle="modal" data-target="#preOPT">Pre-completion OPT</li>
+            <li data-toggle="modal" data-target="#postOPT">Post-completion OPT</li>
+            <li data-toggle="modal" data-target="#stem">STEM Extension</li>
+          </ul>
+          <li>Severe Economic Hardship</li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h4 class="faqHeader">Reduced Course Load</h4>
+      </div>
+      <div class="col-3">
+        <h4 class="faqHeader">Transfers</h4>
+      </div>
+      <div class="col-3">
+        <h4 class="faqHeader">Useful Links</h4>
+      </div>
+    </div>
 
   </div>
 
@@ -50,7 +85,209 @@
     </div>
   </footer>
 
-  <script src="../public/js/dashboard.js"></script>
+
+
+
+
+  <!-- Modals -->
+  <!-- Employment Modal -->
+  <div class="modal fade" id="employment" tabindex="-1" role="dialog" aria-labelledby="employmentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="employmentModalLabel">Employment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Many international students studying in the United States would like to work in order to earn some extra
+            money or to help with the bills. However, as an international student, you are very limited in the work you
+            are allowed to participate in. All types of employment must be approved by your DSO prior to you working.
+          </p>
+          <p>
+            Working in the U.S. without the proper authorization is a serious violation of the terms of your F-1 visa.
+            If you work begin working without approval, your DSO is required by federal law to report the violation
+            through SEVIS and your I-20 may be terminated. This means you will have to leave the U.S. immediately and
+            may not be allowed to return.
+          </p>
+          <p>
+            That being said, there are certain circumstances that allow you to work while studying in the U.S. These are
+            listed below but if you have any questions regarding your employment options, speak to your DSO.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- On Campus Employment Modal -->
+  <div class="modal fade" id="onCamp" tabindex="-1" role="dialog" aria-labelledby="onCampModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="onCampModalLabel">On Campus Employment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are in status (your SEVIS record is active), then you are eligible for on-campus employment. This
+            allows to you work at your school or at a location off-campus that is affiliated with your school. An
+            example of this would be working at your school’s gym, bookstore, cafeteria, library… the list goes on. The
+            opportunities will vary by each school.
+          </p>
+          <p>
+            Speak to your DSO to see what opportunities are available to you.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CPT Modal -->
+  <div class="modal fade" id="CPT" tabindex="-1" role="dialog" aria-labelledby="CPTLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="CPTLabel">Curricular Practical Training (CPT)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Add info
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPT Modal -->
+  <div class="modal fade" id="OPT" tabindex="-1" role="dialog" aria-labelledby="OPTLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="OPTLabel">Optional Practical Training (OPT)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Optional Practical Training or OPT is an important employment benefit offered to international students.
+            With OPT authorization, you are legally able to work anywhere in the United States for up to 12-months as
+            long as the work relates to your field of study. In order to be approved for OPT, you must submit an
+            application to USCIS requesting permission. This process usually takes 90-days but when you are approved,
+            you will receive an Employment Authorization Document (or EAD Card). There are two different types of OPT
+            that you may be able to apply for:
+          </p>
+          <p>Pre-Completion OPT and Post-Completion OPT
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pre-completion OPT Modal -->
+  <div class="modal fade" id="preOPT" tabindex="-1" role="dialog" aria-labelledby="preOPTLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="preOPTLabel">Pre-completion OPT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are approved for pre-completion OPT, you are able to work while you are enrolled in your program.
+          </p>
+          <p>During your academic term, you are able to work up to 20-hours per week. During a break between terms or
+            on a vacation quarter/semester, you can work full-time.
+          </p>
+          <p><i>Any amount of time you work with pre-completion OPT will be deducted from your post-completion OPT
+              time.</i>
+          </p>
+          <p><strong>Example:</strong> If you apply and are approved for part-time pre-completion OPT from 09/01/2018
+            to 01/01/2019,
+            then you would now have 10-months of post-completion remaining.
+          </p>
+          <p>4 months of part-time OPT = 2 months of full-time OPT
+          </p>
+          <p>12 months - 2 months = 10vmonths of post-completion OPT remaining
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post-completion OPT Modal -->
+  <div class="modal fade" id="postOPT" tabindex="-1" role="dialog" aria-labelledby="postOPTLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postOPTLabel">Post-completion OPT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are approved for post-completion OPT, you are able to work in the U.S. for up to 12-months as long
+            as your job relates to your field of study and you work full-time (at least 20-hours per week).
+          </p>
+          <p>Post-completion OPT is a great opportunity for you to gain work experience before you return home country
+            or before you begin a new academic program.
+          </p>
+          <p><strong>Example:</strong> You successfully complete a 2-year associate’s degree at a community college in
+            computer science, work for a year as a web developer before you begin your bachelor’s degree program at a
+            university in software engineering.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEM Modal -->
+  <div class="modal fade" id="stem" tabindex="-1" role="dialog" aria-labelledby="stemLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stemLabel">STEM Extension</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Students who earn a bachelor’s, master’s, or doctoral degree in a STEM major (science, technology,
+            engineering, or math) are eligible for a 24-month extension in addition to the 12-month post-completion OPT
+            period. This means the qualifying student can work for up to three years in the U.S.!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
 </body>
 
 </html>

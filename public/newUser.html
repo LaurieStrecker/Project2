@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -12,19 +14,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Pocket Advisor</title>
+  <title>Pocket Advisor - New User</title>
 </head>
 
 <body>
 
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron updateBanner">
       <h1>New Student Information</h1>
       <hr>
-      <h3>Before you get started, we need to gather some information from your I-20. Please complete the below fields
-        and hit the
-        Submit button.</h3>
-
+      <h4>Before you get started, we need to gather some information from your I-20. Please complete the below fields
+        and hit the Submit button.</h4>
     </div>
   </div>
 
@@ -123,11 +123,10 @@
 
         </form>
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary userSubmit">Submit</button>
+          <button type="submit" id="submit" class="btn btn-primary userSubmit">Submit</button>
         </div>
       </div>
     </div>
-  </div>
 
   <footer>
     <div class="d-flex justify-content-center copyright">
@@ -156,7 +155,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- First Name Modal -->
   <div class="modal fade" id="modalFirstName" tabindex="-1" role="dialog" aria-labelledby="firstNameModalLabel"
@@ -177,7 +175,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Start Date Modal -->
   <div class="modal fade" id="modalStartDate" tabindex="-1" role="dialog" aria-labelledby="startDateModalLabel"
@@ -198,7 +195,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- End Date Modal -->
   <div class="modal fade" id="modalEndDate" tabindex="-1" role="dialog" aria-labelledby="endDateModalLabel"
@@ -219,7 +215,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Education Level Modal -->
   <div class="modal fade" id="modalEdLvl" tabindex="-1" role="dialog" aria-labelledby="edLvlModalLabel"
@@ -240,7 +235,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Cip Code Modal -->
   <div class="modal fade" id="modalCipCode" tabindex="-1" role="dialog" aria-labelledby="cipCodeModalLabel"
@@ -261,9 +255,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-
-</body>
-
+    <script src="js/newUser.js" type="text/javascript"></script>
+  </body>
 </html>

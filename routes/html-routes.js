@@ -11,8 +11,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/newUser.html"));
   });
 
+  app.get("/dashboard", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.send("404");
+    res.status("404");
   });
 };
