@@ -1,31 +1,33 @@
 require("dotenv").config();
+// var path = require("path");
 var express = require("express");
-var bodyParser = require("body-parser");
-var cookieParser = require("cookie-parser");
-var session = require("express-session");
 
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 8050;
 
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// Serve static files
 app.use(express.static("public"));
-app.use(cookieParser());
 
-// For BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static(__dirname + "/public"));
+// Google Routs
+require("./config/passport-setup.js")(app);
+require("./routes/googleRoutes/auth-routes.js")(app);
 
 // Routes
-require("./routes/student-api-routes")(app);
-require("./routes/html-routes")(app);
+// require("./routes/student-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-//load passport strategies
-/* require("./config/passport/passport.js")(passport, models.user); */
+// Checks if a user is logged in
+// var accessProtectionMiddleware = (req, res, next) => {
+//   if (req.isAuthenticated()) {
+//     next();
+//   } else {
+//     res.status(403).json({
+//       message: "must be logged in to continue"
+//     });
+//   }
+// };
 
 var syncOptions = { force: false };
 
@@ -36,12 +38,12 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(port, function () {
     console.log(
-      "==> Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      port,
+      port
     );
   });
 });
