@@ -3,7 +3,7 @@ function getUser() {
   $.ajax({
     url: "api/students/5",
     type: "GET"
-  }).then(function (res) {
+  }).then(function(res) {
     console.log(res);
     $("#lastName").val(res.lastname);
     $("#firstName").val(res.firstname);
@@ -177,13 +177,13 @@ $("#updateInfo").on("click", function(event) {
 });
 
 //delete user from db
-$("#userDelete").on("click", function (event) {
+$("#userDelete").on("click", function(event) {
   event.preventDefault();
   console.log(event);
   $.ajax({
     url: "/api/students/8",
     type: "DELETE"
-  }).then(function () {
+  }).then(function() {
     console.log("deleting user");
     window.location = "/";
   });
