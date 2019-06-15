@@ -5,16 +5,28 @@ module.exports = function(app) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
+    console.log(db.Students);
     db.Students.findOne({
       where: {
         id: req.params.id
-      },
-      include: [db.Post]
+      }
     }).then(function(dbStudent) {
       console.log(dbStudent);
       res.json(dbStudent);
     });
   });
+
+  /* app.get("api/students/:id", function(req, res) {
+    db.Students.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.cipTable]
+    }).then(function(dbStudent) {
+      console.log(dbStudent);
+      res.json(dbStudent);
+    });
+  }); */
 
   // create method called to create a new user within our db
   app.post("/api/students", function(req, res) {
