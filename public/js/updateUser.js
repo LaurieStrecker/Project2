@@ -35,6 +35,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Last Name \n";
         // alert("Please enter your last name.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#firstName").each(function() {
@@ -43,6 +45,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "First Name \n";
         // alert("Please enter your first name.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     // email address validation
@@ -52,6 +56,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Email Address \n";
         // alert("Please enter a valid email address.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     //phone number validation
@@ -61,6 +67,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Phone Number \n";
         // alert("Please enter your phone number.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#schoolName").each(function() {
@@ -69,6 +77,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "School Name \n";
         // alert("Please enter the name of your school.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#termType").each(function() {
@@ -77,6 +87,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Academic Term Type \n";
         // alert("Please select your school's academic term type.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#startDate").each(function() {
@@ -85,6 +97,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Start Date \n";
         // alert("Please select your start date as listed on your I-20.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#endDate").each(function() {
@@ -93,6 +107,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "End Date \n";
         // alert("Please select your end date as listed on your I-20.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     $("#edLvl").each(function() {
@@ -101,6 +117,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "Education Level \n";
         // alert("Please select your education level.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     //cip code validation
@@ -110,6 +128,8 @@ $("#updateInfo").on("click", function(event) {
         isValid = false;
         errorMessage += "CIP Code";
         // alert("Please enter your CIP Code.");
+      } else {
+        $(this).css("border-color", "green");
       }
     });
     if (errorMessage !== "") {
