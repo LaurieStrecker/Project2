@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Happy_Pug19",
+    "database": "student_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "yourRootPassword",
+    "database": "student_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "mysql://ampr3nkg0sp2mtdd:oobdtj74oyh98iah@edo4plet5mhv93s3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mqmy84hrhnmc2nk1",
+    "dialect": "mysql"
+  }
+}
