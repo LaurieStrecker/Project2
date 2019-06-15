@@ -57,25 +57,47 @@
       <div class="col-3">
         <h4 class="faqHeader" data-toggle="modal" data-target="#employment">Employment</h4>
         <ul>
-          <li data-toggle="modal" data-target="#onCamp">On Campus Employment</li>
-          <li data-toggle="modal" data-target="#CPT">Curricular Practical Training</li>
+          <li class="faqLink" data-toggle="modal" data-target="#onCamp">On Campus Employment</li>
+          <li class="faqLink" data-toggle="modal" data-target="#CPT">Curricular Practical Training</li>
           <li data-toggle="modal" data-target="#OPT">Optional Practical Training</li>
           <ul>
-            <li data-toggle="modal" data-target="#preOPT">Pre-completion OPT</li>
-            <li data-toggle="modal" data-target="#postOPT">Post-completion OPT</li>
-            <li data-toggle="modal" data-target="#stem">STEM Extension</li>
+            <li class="faqLink" data-toggle="modal" data-target="#preOPT">Pre-completion OPT</li>
+            <li class="faqLink" data-toggle="modal" data-target="#postOPT">Post-completion OPT</li>
+            <ul>
+              <li class="faqLink" data-toggle="modal" data-target="#stem">STEM Extension</li>
+            </ul>
           </ul>
-          <li>Severe Economic Hardship</li>
+          <!-- <li>Severe Economic Hardship</li> -->
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <h4 class="faqHeader" data-toggle="modal" data-target="#rcl">Reduced Course Load</h4>
+        <ul>
+          <li class="faqLink" data-toggle="modal" data-target="#medical">Medical</li>
+          <li class="faqLink" data-toggle="modal" data-target="#grad">Graduating Quarter/Semester</li>
+          <li class="faqLink" data-toggle="modal" data-target="#concurrent">Concurrent Enrollment</li>
+          <li class="faqLink" data-toggle="modal" data-target="#academicDiff">Initial Academic Difficulty</li>
         </ul>
       </div>
       <div class="col-3">
-        <h4 class="faqHeader">Reduced Course Load</h4>
-      </div>
-      <div class="col-3">
-        <h4 class="faqHeader">Transfers</h4>
+        <h4 class="faqHeader" data-toggle="modal" data-target="#transfer">Transfers</h4>
+        <ul>
+          <li class="faqLink" data-toggle="modal" data-target="#transIn">Transfer-In School</li>
+          <li class="faqLink" data-toggle="modal" data-target="#transOut">Transfer-Out School</li>
+        </ul>
       </div>
       <div class="col-3">
         <h4 class="faqHeader">Useful Links</h4>
+        <div class="links">
+          <p><a class="text-dark" href="https://studyinthestates.dhs.gov/" target="_blank">Study in the States</a></p>
+          <p><a class="text-dark" href="https://www.ice.gov/sevis" target="_blank">SEVP</a></p>
+          <p><a class="text-dark" href="https://sevp.ice.gov/opt/#/login" target="_blank">SEVP Portal</a></p>
+          <p><a class="text-dark" href="https://www.uscis.gov/" target="_blank">USCIS</a></p>
+          <p><a class="text-dark" href="https://egov.uscis.gov/casestatus/landing.do" target="_blank">USCIS Case Status Check</a></p>
+          <p><a class="text-dark" href="https://i94.cbp.dhs.gov/I94/#/home" target="_blank">I-94</a></p>
+          <p></p>
+        </div>
       </div>
     </div>
 
@@ -192,7 +214,7 @@
             you will receive an Employment Authorization Document (or EAD Card). There are two different types of OPT
             that you may be able to apply for:
           </p>
-          <p>Pre-Completion OPT and Post-Completion OPT
+          <p><strong>Pre-Completion OPT</strong> and <strong>Post-Completion OPT</strong>
           </p>
         </div>
         <div class="modal-footer">
@@ -281,6 +303,268 @@
             engineering, or math) are eligible for a 24-month extension in addition to the 12-month post-completion OPT
             period. This means the qualifying student can work for up to three years in the U.S.!
           </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RCL Modal -->
+  <div class="modal fade" id="rcl" tabindex="-1" role="dialog" aria-labelledby="rclLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rclLabel">Reduced Course Load</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>In order to maintain your immigration status, you are required you to be enrolled full-time each
+            quarter/semester. For most undergraduate programs, this means 12-credits.
+          </p>
+          <p> However, there are circumstances which will allow you to under-enroll and still keep your status. These
+            circumastances are known as a Reduction in Course Load or an <strong>RCL</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medical RCL Modal -->
+  <div class="modal fade" id="medical" tabindex="-1" role="dialog" aria-labelledby="medicalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="medicalLabel">Medical RCL</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are experiencing a medical condition that prevents you from attending all or some of your classes,
+            you can receive authorization to take less than the required amount of credits. A medical condition can be
+            many different things such as illness, depression, anxiety, injury, pregnancy, etc.
+          </p>
+          <p> In order to be approved, you will need to provide the following documents to your International Advisor:
+          </p>
+          <ul>
+            <li>Your school’s Reduced Course Load Form or Medical Leave Form </li>
+            <ul>
+              <li>Different schools may require different forms. Check with your International Advisor to ask which
+                specific from your school requires</li>
+            </ul>
+            <li>A signature from a doctor authorizing either a full or partial reduction in course load</li>
+          </ul>
+          <p><i>*This can only be authorized by a U.S. licensed medical doctor, doctor of osteopathy, or licensed
+              clinical psychologist. Other healthcare professionals such as a nurse, nurse practitioner, or physical
+              therapist cannot authorize a reduced course load</i></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grad Qt/Sem Modal -->
+  <div class="modal fade" id="grad" tabindex="-1" role="dialog" aria-labelledby="gradLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gradLabel">Graduating Quarter/Semester</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are in your final quarter or semester of study, you only need to the classes that need in order to
+            graduate. For example, if you only need to one classes in order to complete your bachelor’s degree, than you
+            would qualify for a reduced course load.
+          </p>
+          <p>In order to be approved, you will need to provide the following documents to your International Advisor:
+          </p>
+          <ul>
+            <li>A reduced course load form or graduating quarter/semester form</li>
+          </ul>
+          <p><i>*Different schools may require different forms. Check with your International Advisor to ask which
+              specific from your school requires</i></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concurrent Enrollment Modal -->
+  <div class="modal fade" id="concurrent" tabindex="-1" role="dialog" aria-labelledby="concurrentLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="concurrentLabel">Concurrent Enrollment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If your current school does not offer a certain course you want or need, you may be able to take this
+            course at a different school with Concurrent Enrollment. The rules of Concurrent Enrollment state that as
+            long as you are enrolled for a certain number of credits at the school where your I-20 was issued (your
+            primary school), you can take a class at another school (a secondary school) to equal full-time enrollment.
+          </p>
+          <p><strong>Example:</strong> Enroll in at least 7-credits at your primary school and 5-credits at your second
+            school to equal 12-credits.</p>
+          <p>
+            In order to learn more about Concurrent Enrollment at your school, speak to your International Advisor to
+            see if this is a possibility for you. Each school will have a different policy regarding this but you
+            generally will need the following documents to be approved:
+          </p>
+          <ul>
+            <li>A reduced course load form or concurrent enrollment form</li>
+            <li>A copy of your schedule from second school showing the course you are taking</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initial Academic Difficulty Modal -->
+  <div class="modal fade" id="academicDiff" tabindex="-1" role="dialog" aria-labelledby="academicDiffLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="academicDiffLabel">Initial Academic Difficulty</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>If you are in your first quarter or semester of college and are having trouble with your classes, you may
+            be eligible for a reduction in course load if you meet one of the following conditions:
+          </p>
+          <ul>
+            <li>Improper course placement</li>
+            <li>Initial difficulty with reading requirements</li>
+            <li>Initial difficulty with the English language</li>
+            <li>Unfamiliarity with US teaching methods</li>
+          </ul>
+          <p>The Rules:</p>
+          <ul>
+            <li>This authorization can only be used in the first academic term</li>
+            <li>You must maintain half of the course load normally required</li>
+            <ul>
+              <li><strong>Example:</strong> You must be enrolled in 6-credits if you normally are required to be
+                enrolled for 12-credits</li>
+            </ul>
+            <li>You must enroll in a full course of study in the following quarter/semester</li>
+          </ul>
+          <p><i>In order to learn more about Initial Academic Difficulty at your school, speak to your International
+              Advisor to see if this is a possibility for you</i></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transfer Modal -->
+  <div class="modal fade" id="transfer" tabindex="-1" role="dialog" aria-labelledby="transferLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="transferLabel">Transfers</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Whether you have completed your associate's degree at a community college and are ready to switch to a
+            4-year university or simply want to change schools, transfers are an important step for international
+            students.
+          </p>
+          <p>A “transfer” in this context means moving your I-20 (or SEVIS record) from your current school to your new
+            school. This is generally a simple process but it can be dfficult to understand if you have never
+            transferred your I-20 before.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transfer-In Modal -->
+  <div class="modal fade" id="transIn" tabindex="-1" role="dialog" aria-labelledby="transInLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="transInLabel">Transfer-In School Process</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>
+              Identify the school or schools that you want to attend and apply
+            </li>
+            <ul>
+              <li>Be sure to submit your application to the new school by the application deadline</li>
+            </ul>
+            <li>
+              Your new school will give you a form called a <i>Transfer-in form</i> or a <i>Status Verification form</i>
+              or something
+              similar
+            </li>
+            <ul>
+              <li>This form lets your new school know that you are attending a school in the US and that you have an
+                active I-20</li>
+            </ul>
+            <li>In most cases, you will fill out a portion of the form and then submit it to your International Advisor
+              at your current school</li>
+            <li>Your advisor will complete the rest of the form and send it to your new school</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transfer-Out Modal -->
+  <div class="modal fade" id="transOut" tabindex="-1" role="dialog" aria-labelledby="transOutLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="transOutLabel">Transfer-Out School Process</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>In order for your current school to release (or transfer) your I-20 to your new school, you will need to
+            submit two documents to your advisor:
+          </p>
+          <ul>
+            <li>Your current school's <i>Transfer-out form</i></li>
+            <li>The acceptance letter from your new school</li>
+          </ul>
+          <p><strong><u>The Rules</u></strong></p>
+          <p>Once your record is transferred, you must begin at your new school on the next available start date or
+            within five-months; whichever comes first.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
