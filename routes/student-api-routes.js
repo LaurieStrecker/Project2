@@ -8,13 +8,24 @@ module.exports = function(app) {
     db.Students.findOne({
       where: {
         id: req.params.id
-      },
-      include: [db.Post]
+      }
     }).then(function(dbStudent) {
       console.log(dbStudent);
       res.json(dbStudent);
     });
   });
+
+  /* app.get("api/students/:id", function(req, res) {
+    db.Students.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.cipTable]
+    }).then(function(dbStudent) {
+      console.log(dbStudent);
+      res.json(dbStudent);
+    });
+  }); */
 
   // create method called to create a new user within our db
   app.post("/api/students", function(req, res) {
