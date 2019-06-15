@@ -106,9 +106,67 @@ $("#submit").on("click", function(event) {
   // Form validation
   function validateForm() {
     var isValid = true;
-    $("input").each(function() {
+    $("#lastName").each(function() {
       if ($(this).val() === "") {
         isValid = false;
+        alert("Please enter your last name.");
+      }
+    });
+    $("#firstName").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please enter your first name.");
+      }
+    });
+    // email address validation
+    $("#email").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please enter a valid email address.");
+      }
+    });
+    //phone number validation
+    $("#phone").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please enter your phone number.");
+      }
+    });
+    $("#schoolName").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please enter the name of your school.");
+      }
+    });
+    $("#termType").each(function() {
+      if ($(this).val() === "Select One") {
+        isValid = false;
+        alert("Please select your school's academic term type.");
+      }
+    });
+    $("#startDate").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please select your start date as listed on your I-20.");
+      }
+    });
+    $("#endDate").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please select your end date as listed on your I-20.");
+      }
+    });
+    $("#edLvl").each(function() {
+      if ($(this).val() === "Select One") {
+        isValid = false;
+        alert("Please select your education level.");
+      }
+    });
+    //cip code validation
+    $("#cipCode").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+        alert("Please enter your CIP Code.");
       }
     });
     return isValid;
@@ -173,7 +231,5 @@ $("#submit").on("click", function(event) {
       console.log(res);
       console.log("info saved to database");
     });
-  } else {
-    alert("Please complete the entire form!");
   }
 });
