@@ -31,6 +31,6 @@ module.exports = function(sequelize, DataTypes) {
     cipTable.hasMany(models.Students, {
       onDelete: "cascade"
     });
-  };
-  return cipTable; */
+  }; */
+  return cipTable;
 };

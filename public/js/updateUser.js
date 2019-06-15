@@ -1,7 +1,7 @@
 //grab user info and post to our updateUser page
 function getUser() {
   $.ajax({
-    url: "api/students/5",
+    url: "api/students/4",
     type: "GET"
   }).then(function(res) {
     console.log(res);
