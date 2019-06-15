@@ -1,102 +1,22 @@
+/* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
-  var Students = sequelize.define("Students", {
-    id: {
+  var Student = sequelize.define("Student", {
+    google_id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
-    },
-    firstname: {
-      type: DataTypes.STRING(50),
       allowNull: false,
       validate: {
         len: [1]
       }
-    },
-    lastname: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    username: {
-      type: DataTypes.TEXT
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    email: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        isEmail: true,
-        len: [1]
-      }
-    },
-    phone: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    school_name: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    qt_sem: {
-      type: DataTypes.STRING(50),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    program_start: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      validate: {
-        isDate: true,
-        len: [1]
-      }
-    },
-    program_end: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      validate: {
-        isDate: true,
-        len: [1]
-      }
-    },
-    ed_level: {
-      type: DataTypes.STRING(50)
-    },
-    cip_code_one: {
-      type: DataTypes.DECIMAL(6, 4),
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    last_login: {
-      type: DataTypes.DATEONLY
-    },
-    status: {
-      type: DataTypes.ENUM("active", "inactive"),
-      defaultValue: "active"
     }
   });
 
-  Students.associate = function(models) {
+  Student.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Students.hasMany(models.Post, {
+    Student.hasMany(models.Post, {
       onDelete: "cascade"
     });
   };
 
-  return Students;
+  return Student;
 };

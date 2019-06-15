@@ -30,17 +30,19 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });
 
   //update
-  app.put("/api/students", function(req, res) {
+  app.put("/api/students/:id", function(req, res) {
     db.Students.update(req.body, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });
