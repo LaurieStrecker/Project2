@@ -1,75 +1,33 @@
 require("dotenv").config();
+// var path = require("path");
 var express = require("express");
-var passport = require("passport");
-var bodyParser = require("body-parser");
-var cookieParser = require("cookie-parser");
-var session = require("express-session");
 
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 8050;
 
-// // Google auth
-// var GOOGLE_CLIENT_ID =
-//   "30634033579-46upcq5quevugp6473gqqo79hbn2vomk.apps.googleusercontent.com";
-// var GOOGLE_CLIENT_SECRET = "e6chWqv2hQ_dB6Ju6hX6yEx-";
-
-// // Passport session setup.
-// passport.serializeUser(function(user, done) {
-//   done(null, user);
-// });
-// passport.deserializeUser(function(obj, done) {
-//   done(null, obj);
-// });
-
-// Use the GoogleStrategy within Passport.
-// passport.use(
-//   new GoogleStrategy(
-//     {
-//       clientID: GOOGLE_CLIENT_ID,
-//       clientSecret: GOOGLE_CLIENT_SECRET,
-//       callbackURL: "http://localhost:3000/auth/google/callback",
-//       passReqToCallback: true
-//     },
-//     function(request, accessToken, refreshToken, profile, done) {
-//       // asynchronous verification, for effect...
-//       process.nextTick(function() {
-//         return done(null, profile);
-//       });
-//     }
-//   )
-// );
-
-// Middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// Serve static files
 app.use(express.static("public"));
-app.use(cookieParser());
 
-// For BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// For Passport
-app.use(
-  session({
-    secret: "keyboard cat",
-    resave: true,
-    saveUninitialized: true
-  })
-); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-
-app.use(express.static(__dirname + "/public"));
+// Google Routs
+require("./config/passport-setup.js")(app);
+require("./routes/googleRoutes/auth-routes.js")(app);
 
 // Routes
-require("./routes/student-api-routes")(app);
-require("./routes/html-routes")(app);
+// require("./routes/student-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-//load passport strategies
-/* require("./config/passport/passport.js")(passport, models.user); */
+// Checks if a user is logged in
+// var accessProtectionMiddleware = (req, res, next) => {
+//   if (req.isAuthenticated()) {
+//     next();
+//   } else {
+//     res.status(403).json({
+//       message: "must be logged in to continue"
+//     });
+//   }
+// };
 
 var syncOptions = { force: false };
 
@@ -81,11 +39,11 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+  app.listen(port, function() {
     console.log(
-      "==> Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      port,
+      port
     );
   });
 });
