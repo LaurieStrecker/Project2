@@ -1,3 +1,0 @@
-
-
-$submitBtn.on("click", handleFormSubmit);
