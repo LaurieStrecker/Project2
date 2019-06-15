@@ -21,25 +21,25 @@ module.exports = function(app) {
     (req, res) => {
       var studentGoogObj = req.user._json;
       // console.log("wooo we authenticated, here is our user object:", req.user);
-      // res.json(req.user);
+      res.json(req.user);
       console.log(req.user._json);
 
       //look up in db user google = req.user._json.sub
-      db.Students.findOne({
-        where: {
-          googleId: studentGoogObj
-        }
-      }).then(function(dbStudent) {
-        //if user does not exists send to newuser
-        if (dbStudent) {
-          res.redirect("https://frozen-spire-30925.herokuapp.com/dashboard");
-          //if user exists send to dashboard
-        } else {
-          res.redirect("https://frozen-spire-30925.herokuapp.com/newUser");
-        }
-        console.log(dbStudent);
-        // res.json(dbStudent);
-      });
+      // db.Students.findOne({
+      //   where: {
+      //     googleId: studentGoogObj
+      //   }
+      // }).then(function(dbStudent) {
+      //   //if user does not exists send to newuser
+      //   if (dbStudent) {
+      //     res.redirect("https://frozen-spire-30925.herokuapp.com/dashboard");
+      //     //if user exists send to dashboard
+      //   } else {
+      //     res.redirect("https://frozen-spire-30925.herokuapp.com/newUser");
+      //   }
+      //   console.log(dbStudent);
+      //   // res.json(dbStudent);
+      // });
   
       
     }
