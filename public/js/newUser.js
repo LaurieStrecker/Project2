@@ -161,7 +161,7 @@ $("#submit").on("click", function(event) {
 
     console.log(newStudent);
 
-    use a post call to save all student info to our mysql db
+    // use a post call to save all student info to our mysql db
     $.ajax({
       headers: {
         "Content-Type": "application/json"
