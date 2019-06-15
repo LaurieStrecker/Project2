@@ -69,7 +69,7 @@ require("./routes/student-api-routes")(app);
 require("./routes/html-routes")(app);
 
 //load passport strategies
-require("./config/passport/passport.js")(passport, models.user);
+/* require("./config/passport/passport.js")(passport, models.user); */
 
 var syncOptions = { force: false };
 

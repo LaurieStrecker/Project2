@@ -56,7 +56,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     program_start: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
         isDate: true,
@@ -64,7 +64,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     program_end: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       validate: {
         isDate: true,
@@ -82,7 +82,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     last_login: {
-      type: DataTypes.DATE
+      type: DataTypes.DATEONLY
     },
     status: {
       type: DataTypes.ENUM("active", "inactive"),

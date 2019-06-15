@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+  <title>Pocket Advisor - Update Info</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron updateBanner">
+      <h1>Update Information</h1>
+      <hr>
+      <h4>Select field(s) and update your information as needed.</h4>
+      <br>
+      <h6>No longer want an account?</h6>
+      <button type="submit" id="userDelete" class="btn btn-danger">Delete Profile</button>
+    </div>
+  </div>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-12">
+  
+            <div id="page">
+  
+              
+              <div class="row" id="leftSide">
+                <div class="col-6">
+  
+                  <div class="form-group left">
+                    <label for="lastName">Last Name</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalLastName"></i>
+                    <input type="text" class="form-control newUserInfo" id="lastName">
+                  </div>
+  
+                  <div class="form-group left">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control newUserInfo" id="email">
+                  </div>
+  
+                  <div class="form-group right">
+                    <label for="schoolName">School Name</label>
+                    <input type="text" class="form-control newUserInfo" id="schoolName">
+                  </div>
+  
+                  <div class="form-group left">
+                    <label for="startDate">Program Start Date</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalStartDate"></i>
+                    <input type="date" class="form-control newUserInfo" id="startDate">
+                  </div>
+  
+                  <div class="form-group left">
+                    <label for="edLvl">Education Level</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEdLvl"></i>
+                    <select class="form-control newUserInfo" id="edLvl">
+                      <option selected>Select One</option>
+                      <option value="languageTraning">Language Training</option>
+                      <option value="associates">Associate's</option>
+                      <option value="bachelors">Bachelor's</option>
+                      <option value="masters">Master's</option>
+                      <option value="doctoral">Doctoral</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row" id="rightSide">
+                <div class="col-6">
+  
+                  <div class="form-group right">
+                    <label for="firstName">First Name</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalFirstName"></i>
+                    <input type="text" class="form-control newUserInfo" id="firstName">
+                  </div>
+  
+                  <div class="form-group right">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control newUserInfo" id="phone">
+                  </div>
+  
+                  <div class="form-group left">
+                    <label for="termType">Academic Term</label>
+                    <select class="form-control newUserInfo" id="termType">
+                      <option selected>Select One</option>
+                      <option value="quarter">Quarter</option>
+                      <option value="semester">Semester</option>
+                    </select>
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="endDate">Program End Date</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalEndDate"></i>
+                    <input type="date" class="form-control newUserInfo" id="endDate">
+                  </div>
+  
+                  <div class="form-group">
+                    <label for="cipCode">Major Code</label>
+                    <i class="far fa-question-circle help" data-toggle="modal" data-target="#modalCipCode"></i>
+                    <input type="text" class="form-control newUserInfo" id="cipCode">
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+  
+          <div class="d-flex justify-content-center">
+            <button type="submit" id="updateInfo" class="btn btn-primary userSubmit">Update</button>
+          </div>
+        </div>
+      </div>
+  
+    <footer>
+      <div class="d-flex justify-content-center copyright">
+        <p class="copy">Pocket Advisor &copy; 2019 </p>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+  <!-- Last Name Modal -->
+  <div class="modal fade" id="modalLastName" tabindex="-1" role="dialog" aria-labelledby="lastNameModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lastNameModalLabel">Last Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/lastName.png" alt="I-20 Last Name">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- First Name Modal -->
+<div class="modal fade" id="modalFirstName" tabindex="-1" role="dialog" aria-labelledby="firstNameModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="firstNameModalLabel">First Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/firstName.png" alt="I-20 First Name">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Date Modal -->
+<div class="modal fade" id="modalStartDate" tabindex="-1" role="dialog" aria-labelledby="startDateModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="startDateModalLabel">Program Start Date</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/prgStart.png" alt="I-20 Start Date">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Date Modal -->
+<div class="modal fade" id="modalEndDate" tabindex="-1" role="dialog" aria-labelledby="endDateModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="endDateModalLabel">Program End Date</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/prgEnd.png" alt="I-20 End Date">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Education Level Modal -->
+<div class="modal fade" id="modalEdLvl" tabindex="-1" role="dialog" aria-labelledby="edLvlModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edLvlModalLabel">Education Level</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/edLvl.png" alt="I-20 Education Level">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cip Code Modal -->
+<div class="modal fade" id="modalCipCode" tabindex="-1" role="dialog" aria-labelledby="cipCodeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cipCodeModalLabel">Major Code</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/cip.png" alt="I-20 Major Code">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="js/updateUser.js" type="text/javascript"></script>
+
+</body>
+
+</html>

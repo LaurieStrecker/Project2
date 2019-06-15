@@ -11,6 +11,7 @@ module.exports = function(app) {
       },
       include: [db.Post]
     }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });
@@ -29,6 +30,19 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(function(dbStudent) {
+      console.log(dbStudent);
+      res.json(dbStudent);
+    });
+  });
+
+  //update
+  app.put("/api/students/:id", function(req, res) {
+    db.Students.update(req.body, {
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbStudent) {
+      console.log(dbStudent);
       res.json(dbStudent);
     });
   });
