@@ -161,18 +161,18 @@ $("#submit").on("click", function(event) {
 
     console.log(newStudent);
 
-    // use a post call to save all student info to our mysql db
-    // $.ajax({
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   url: "/api/students",
-    //   type: "POST",
-    //   data: JSON.stringify(newStudent)
-    // }).then(function(res) {
-    //   console.log(res);
-    //   console.log("info saved to database");
-    // });
+    use a post call to save all student info to our mysql db
+    $.ajax({
+      headers: {
+        "Content-Type": "application/json"
+      },
+      url: "/api/students",
+      type: "POST",
+      data: JSON.stringify(newStudent)
+    }).then(function(res) {
+      console.log(res);
+      console.log("info saved to database");
+    });
   } else {
     alert("Please complete the entire form!");
   }
